@@ -1,0 +1,10 @@
+apiVersion: skaffold/v1beta7
+kind: Config
+build:
+  artifacts:
+  - image: saumya7229/auth
+    context: auth
+deploy:
+  kubectl:
+    manifests:
+    - infra/k8s/auth-depl.yaml
